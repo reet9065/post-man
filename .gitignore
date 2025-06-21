@@ -45,8 +45,6 @@ post-man_frontend/package-lock.json
 post-man_frontend/.env
 post-man_frontend/dist/
 
-# Ignore Prisma migration engine files (already in generated)
-post-man_backend/prisma/client.js
 
 # Optional: ignore VS Code settings, MacOS files, or OS-generated
 .vscode/
