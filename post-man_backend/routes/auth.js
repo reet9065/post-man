@@ -40,7 +40,7 @@ router.get('/', async (req, res) => {
     .cookie('token', newToken, {
       httpOnly: true,
       secure: true, 
-      sameSite: 'Strict',
+      sameSite: 'none',
       maxAge: 1000 * 60 * 60 * 24, 
     })
     .status(201)
