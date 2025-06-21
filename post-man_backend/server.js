@@ -8,10 +8,25 @@ const requestRoutes = require('./routes/requests');
 
 const app = express();
 
-app.use(cors({
-  origin: process.env.FRONTEND_HOST,
-  credentials: true
-}));
+// List of allowed origins
+const allowedOrigins = [ process.env.FRONTEND_HOST, process.env.FRONTEND_HOST2, process.env.FRONTEND_HOST3];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('CORS not allowed from this origin'));
+    }
+  },
+  credentials: true, // required if you're using cookies
+};
+
+app.use(cors(corsOptions));
+
 app.use(cookieParser());
 app.use(express.json());
 
