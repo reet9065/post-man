@@ -1,0 +1,54 @@
+post-man_backend/node_modules
+# Keep environment variables out of version control
+post-man_backend/.env
+
+post-man_backend/generated/prisma
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+post-man_frontend/node_modules
+post-man_frontend/dist
+post-man_frontend/dist-ssr
+*.local
+
+# Editor directories and files
+post-man_frontend/.vscode/*
+post-man_frontend/!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Root-level ignore
+.env
+*.log
+.DS_Store
+
+# Ignore node_modules and build files in both frontend and backend
+post-man_backend/node_modules/
+post-man_backend/package-lock.json
+post-man_backend/generated/
+post-man_backend/.env
+
+post-man_frontend/node_modules/
+post-man_frontend/package-lock.json
+post-man_frontend/.env
+post-man_frontend/dist/
+
+# Ignore Prisma migration engine files (already in generated)
+post-man_backend/prisma/client.js
+
+# Optional: ignore VS Code settings, MacOS files, or OS-generated
+.vscode/
+Thumbs.db
+
